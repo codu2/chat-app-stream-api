@@ -18,9 +18,13 @@
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
 
-  /* colors */
-  --primary-color: #006cff;
+  /* colors 
+  --primary-color: #005fff;
   --primary-color-faded: #006cff5c;
+  */
+
+  --primary-color: #ffffff4d;
+  --primary-color-faded: #ffffff33;
 
   --magenta: #ff00ff;
   --red: #ff0000;
@@ -190,4 +194,106 @@
     box-shadow: unset;
     transition: unset;
   }
+}
+
+.team-channel-list {
+  min-height: 200px;
+  background-color: var(--grey-whisper);
+}
+
+.team-channel-list p:not(:first-child) {
+  padding-left: 30px;
+  font-size: 14px;
+  color: var(--white90);
+}
+
+.team-channel-header__container {
+  background-color: var(--white90);
+}
+
+.str-chat__date-separator {
+  margin: 12px 16px;
+  padding: 30px;
+}
+
+.str-chat__date-separator-line {
+  background-color: var(--white30);
+  height: 0.7px;
+}
+
+.str-chat__date-separator-date {
+  color: var(--white30);
+  font-weight: 400;
+}
+
+.str-chat__message-team {
+  min-height: 50px;
+  padding: 10px 25px 5px 10px;
+  background-color: var(--white);
+  border-top: 0.5px solid #333;
+  border-bottom: 0.5px solid #333;
+}
+
+.str-chat__message-team-meta time {
+  color: var(--white50);
+  visibility: visible;
+  margin-top: 5px;
+}
+
+.str-chat__message-team-author strong {
+  color: var(--white70);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.str-chat__message-team-content p {
+  color: var(--white60);
+  font-weight: 300;
+}
+
+.str-chat__message-team-actions {
+  background-color: var(--white);
+  border-color: var(--grey-gainsboro);
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 90px;
+  height: 27px;
+}
+
+.str-chat__message-team-actions > span svg {
+  fill: var(--white70);
+}
+
+.str-chat__reaction-selector {
+  background: transparent;
+  border: 1px solid var(--grey-gainsboro);
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 99999px;
+  height: 47px;
+}
+
+.str-chat__reaction-selector li {
+  font-size: 20px;
+}
+
+.str-chat__reaction-selector li span span {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.str-chat__input-flat .str-chat__textarea > textarea {
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--white30);
+}
+
+.str-chat__input-flat .str-chat__textarea > textarea:focus,
+.str-chat__input-flat .str-chat__textarea > textarea:active {
+  color: var(--white50);
+}
+
+.str-chat__message-team-status svg path {
+  fill: var(--white70);
 }

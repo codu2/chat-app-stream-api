@@ -103,9 +103,9 @@ const Auth = () => {
             )}
             {isSignup && (
               <div className="auth__form-container_fields-content_input">
-                <label htmlFor="avatarUrl">Avatar URL</label>
+                <label htmlFor="avatarURL">Avatar URL</label>
                 <input
-                  name="avatarUrl"
+                  name="avatarURL"
                   type="text"
                   placeholder="Avatar URL"
                   onChange={handleChange}

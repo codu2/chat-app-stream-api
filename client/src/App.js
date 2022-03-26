@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { StreamChat } from "stream-chat";
 import { Chat, darkModeTheme } from "stream-chat-react";
 import Cookies from "universal-cookie";
 
 import { ChannelListContainer, ChannelContainer, Auth } from "./components";
 
+import "stream-chat-react/dist/css/index.css";
 import "./App.css";
 
 const cookies = new Cookies();
@@ -31,13 +32,27 @@ if (authToken) {
 }
 
 const App = () => {
+  const [createType, setCreateType] = useState("");
+  const [isCreating, setIsCreating] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+
   if (!authToken) return <Auth />;
 
   return (
     <div className="app__wrapper">
-      <Chat client={client} customStyles={darkModeTheme}>
-        <ChannelListContainer />
-        <ChannelContainer />
+      <Chat client={client} customstyles={darkModeTheme}>
+        <ChannelListContainer
+          isCreating={isCreating}
+          setIsCreating={setIsCreating}
+          setCreateType={setCreateType}
+        />
+        <ChannelContainer
+          isCreating={isCreating}
+          setIsCreating={setIsCreating}
+          isEditing={isEditing}
+          setIsEditing={setIsEditing}
+          createType={createType}
+        />
       </Chat>
     </div>
   );
