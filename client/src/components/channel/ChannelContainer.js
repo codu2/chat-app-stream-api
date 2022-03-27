@@ -14,8 +14,6 @@ const ChannelContainer = (props) => {
   const { channel } = useChatContext();
 
   if (isCreating) {
-    const filters = {};
-
     return (
       <div className="channel__container">
         <CreateChannel createType={createType} setIsCreating={setIsCreating} />
@@ -24,12 +22,10 @@ const ChannelContainer = (props) => {
   }
 
   if (isEditing) {
-    const filters = {};
-
     if (channel?.state?.members) {
       const channelMembers = Object.keys(channel.state.members);
       if (channelMembers.length) {
-        filters.id = { $nin: channelMembers };
+        //filters.id = { $nin: channelMembers };
       }
     }
 

@@ -3,7 +3,17 @@ import React from "react";
 import "./TeamChannelList.css";
 import { AiOutlinePlus } from "react-icons/ai";
 
-const TeamChannelList = ({ children, error = false, loading, type }) => {
+const TeamChannelList = ({
+  children,
+  error = false,
+  loading,
+  type,
+  isCreating,
+  setIsCreating,
+  setIsEditing,
+  setCreateType,
+  setToggleContainer,
+}) => {
   if (error) {
     return type === "team" ? (
       <div className="team-channel-list">
@@ -30,6 +40,16 @@ const TeamChannelList = ({ children, error = false, loading, type }) => {
         <p className="team-channel-list__header__title">
           {type === "team" ? "Channels" : "Direct Messages"}
         </p>
+        <span
+          onClick={() => {
+            setCreateType(type === "team" ? "team" : "messaging");
+            setIsCreating(true);
+            if (setIsEditing) setIsEditing(false);
+            if (setToggleContainer) setToggleContainer((prev) => !prev);
+          }}
+        >
+          <AiOutlinePlus />
+        </span>
       </div>
       {children}
     </div>
