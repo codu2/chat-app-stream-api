@@ -68,7 +68,7 @@
   color: var(--white95);
 }
 
-.channerl-list__container-toggle {
+.channel-list__container-toggle {
   display: none;
   height: 50px;
   width: 50px;

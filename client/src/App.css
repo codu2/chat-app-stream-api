@@ -350,6 +350,7 @@
 
   .channerl-list__container-toggle {
     display: flex;
+    background-color: #fff;
   }
 
   .channel-search__input__wrapper {
@@ -487,4 +488,30 @@
 
 .str-chat__simple-reactions-list-tooltip {
   background: #fff;
+}
+
+.str-chat__message--deleted {
+  background-color: var(--bg-gradient-end);
+  margin: 0 auto;
+}
+
+.unpinned-message {
+  background: var(--bg-gradient-end);
+}
+
+.str-chat__message-team--editing {
+  box-shadow: 0 0 11px 0 rgb(0 0 0 / 6%), inset 0 1px 0 0 var(--white30),
+    inset 0 -1px 0 0 var(--white30);
+}
+
+.quoted-message-inner {
+  margin-left: 5px;
+}
+
+.quoted-message-inner div {
+  color: var(--white50);
+}
+
+.str-chat__message-team .quoted-message {
+  background-color: var(--white70);
 }
